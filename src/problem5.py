@@ -3,9 +3,9 @@ Exam 3, problem 5.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Margaret Luffman.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# DONE: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -145,10 +145,28 @@ def problem5(seq_of_seq):
       :rtype: (list of int) | int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    nlist = []
+    nlist2 = []
+    max = 0
+    for k in range(len(seq_of_seq)):
+        max = 0
+        for j in range(len(seq_of_seq[k])):
+            #max = seq_of_seq[k][0]
+            if seq_of_seq[k][j] > max:
+                max = seq_of_seq[k][j]
+            #print(max)
+        nlist = nlist + [max]
 
+        #print(nlist)
+    for j in range(len(nlist)):
+        if nlist[j] != 0:
+            nlist2 = nlist2 +[nlist[j]]
+
+
+    return nlist2
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
